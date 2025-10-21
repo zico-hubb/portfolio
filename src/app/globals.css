@@ -1,42 +1,332 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Basic global reset for this page */
+.home-container {
+  background-color: #000814;
+  color: #e2e8f0;
+  font-family: "Space Mono", monospace;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.terminal {
+  width: 80%;
+  max-width: 800px;
+  text-align: left;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.terminal-line {
+  margin: 5px 0;
+  font-size: 1.2rem;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background-color: #00ffff;
+  margin-left: 2px;
+  animation: blink 1s infinite;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* Hologram Placeholder */
+.hologram-placeholder {
+  margin: 40px auto;
+  width: 200px;
+  height: 200px;
+  border: 2px dashed #00ffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00ffff;
+  font-size: 0.9rem;
+  text-align: center;
+  filter: drop-shadow(0 0 10px #00ffff);
+}
+
+/* Enter Button */
+.enter-button {
+  margin-top: 30px;
+  padding: 10px 25px;
+  font-family: "Space Mono", monospace;
+  font-size: 1.1rem;
+  color: #000814;
+  background-color: #00ffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.enter-button:hover {
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.dashboard-container {
+  background-color: #000814;
+  color: #e2e8f0;
+  font-family: "Space Mono", monospace;
+  padding: 40px 60px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #a0f0f0;
+  margin-top: 10px;
+}
+
+/* Journey Timeline */
+.journey {
+  margin-bottom: 50px;
+}
+
+.journey h2 {
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+  margin-bottom: 20px;
+}
+
+.timeline {
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-item .date {
+  color: #00ffff;
+  font-weight: bold;
+  position: absolute;
+  left: -110px;
+  width: 100px;
+  text-align: right;
+}
+
+.timeline-item .event {
   margin: 0;
+  padding: 5px 10px;
+  background-color: #0f172a;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #00ffff;
 }
 
-a {
-  color: inherit;
+/* Skills / Tech Stack */
+.skills {
+  margin-bottom: 50px;
+}
+
+.skills h2 {
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-chip {
+  padding: 8px 15px;
+  border: 1px solid #00ffff;
+  border-radius: 6px;
+  color: #00ffff;
+  text-align: center;
+  cursor: default;
+  box-shadow: 0 0 6px #00ffff;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Projects Navigation */
+.projects-nav h2 {
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+  margin-bottom: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #0f172a;
+  border: 1px solid #00ffff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Contact Shortcut */
+.contact-shortcut {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.contact-btn {
+  padding: 12px 25px;
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+  color: #000814;
+  background-color: #00ffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-btn:hover {
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.projects-container {
+  background-color: #000814;
+  color: #e2e8f0;
+  font-family: "Space Mono", monospace;
+  padding: 40px 60px;
+}
+
+.projects-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  margin-bottom: 40px;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Individual Project Card */
+.project-card {
+  background-color: #0f172a;
+  border: 1px solid #00ffff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  color: #00ffff;
+  margin-bottom: 8px;
+}
+
+.project-card .category {
+  font-size: 0.9rem;
+  color: #a0f0f0;
+  margin-bottom: 12px;
+}
+
+.project-card .description {
+  font-size: 0.85rem;
+  color: #e2e8f0;
+}
+
+.contact-container {
+  background-color: #000814;
+  color: #e2e8f0;
+  font-family: "Space Mono", monospace;
+  padding: 40px 60px;
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact-item {
+  background-color: #0f172a;
+  border: 1px solid #00ffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.contact-item h3 {
+  font-size: 1.1rem;
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.contact-item a {
+  color: #a0f0f0;
   text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.contact-item a:hover {
+  color: #00ffff;
 }
+
+.hologram-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.hologram-image {
+  width: 200px;
+  height: auto;
+  filter: drop-shadow(0 0 15px cyan) brightness(1.2) contrast(1.1);
+  border-radius: 50%;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
