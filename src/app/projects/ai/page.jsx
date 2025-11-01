@@ -12,6 +12,14 @@ export default function AIProjects() {
 
         <h2>🚶 Smart Surveillance System (Gait Recognition)</h2>
         <p>An AI-powered surveillance prototype that identifies individuals based on walking patterns (gait). Designed for security use-cases such as restricted area monitoring and border surveillance.</p>
+
+        <h2>Health Data Visualizer and forecast</h2>
+        <p>An AI powered platform that extracts data uploaded as an excel document, then visualizes it in a graph, chart or map. 
+          GitHub repo: https://github.com/zico-hubb/health-visualizer
+        </p>
+        <h2>Constitution AI advisor</h2>
+        <p> AN AI powered tool to help citizens better understand the constituion with the help of AI. A person states there case and the AI gives advise based on the constitution.
+        </p>
       </section>
     </div>
   );
