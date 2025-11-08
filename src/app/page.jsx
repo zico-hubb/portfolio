@@ -8,10 +8,10 @@ export default function Home() {
   const router = useRouter();
   const [lines, setLines] = useState([]);
   const fullLines = [
-    "> Initializing Blockchain Dev Terminal...",
-    "> Verifying developer identity...",
+    "> Initializing Data Analysis Libraries...",
+    "> Verifying visitor identity...",
     "> Access granted ✅",
-    "> Welcome, I’m Zico — Blockchain Developer & AI Engineer",
+    "> Welcome, I’m Zico — Data Scientist & Full Stack Developer",
   ];
 
   useEffect(() => {
@@ -45,6 +45,7 @@ export default function Home() {
 
   return (
     <div className="home-container">
+      {/* Terminal Text */}
       <div className="terminal">
         {lines.map((line, idx) => (
           <p key={idx} className="terminal-line">
@@ -52,37 +53,35 @@ export default function Home() {
             {idx === lines.length - 1 && <span className="cursor">|</span>}
           </p>
         ))}
-
-        
-        {/* Hologram Section */}
-<motion.div
-  className="hologram-container"
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1.5 }}
->
-  <motion.img
-    src="/images/hologram.png"
-    alt="Zico Hologram"
-    className="hologram-image"
-    animate={{ scale: [0.95, 1, 0.95], opacity: [0.8, 1, 0.8] }}
-    transition={{ duration: 2, repeat: Infinity }}
-  />
-</motion.div>
-
-
-        {/* Enter Button */}
-        {lines.length === fullLines.length && (
-          <motion.button
-            className="enter-button"
-            onClick={() => router.push("/dashboard")}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            [ Enter Terminal ]
-          </motion.button>
-        )}
       </div>
+
+      {/* Hologram Section */}
+      <motion.div
+        className="hologram-container"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5 }}
+      >
+        <motion.img
+          src="/images/hologram.png"
+          alt="Zico Hologram"
+          className="hologram-image"
+          animate={{ scale: [0.95, 1, 0.95], opacity: [0.8, 1, 0.8] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        />
+      </motion.div>
+
+      {/* Enter Button */}
+      {lines.length === fullLines.length && (
+        <motion.button
+          className="enter-button"
+          onClick={() => router.push("/dashboard")}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          [ Enter Terminal ]
+        </motion.button>
+      )}
     </div>
   );
 }

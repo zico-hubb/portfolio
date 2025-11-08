@@ -7,13 +7,14 @@ export default function Dashboard() {
   const router = useRouter();
 
   const journey = [
+    { Date: "Verve", event: "I love Data Analysis and the blockchain" },
     { date: "'24-2025", event: "Learning and developing simple programs in python,solidity" },
-    { date: "Jan 2025", event: "Started sharing tech ideas and exploring personal projects" },
+    { date: "Jan 2025", event: "Started learning on data analysis tools" },
     { date: "Jun 2025", event: "Built Siamese Network for fingerprint matching; began learning Solidity" },
     { date: "Jun-Jul 2025", event: "Developed OnChain Election System & ArdhiChain Land Registry NFT System" },
-    { date: "Jul 2025", event: "Built UrbanScope smart city data platform" },
+    { date: "Jul 2025", event: "Explored various and developed data analysis and manipulation platforms" },
     { date: "Jul-Oct 2025", event: "Explored AI-powered systems: FaceGate, Gait Recognition, Border Monitoring" },
-    { date: "Oct 2025", event: "Developed full-stack Aminika Health Services & Bible App" },
+    { date: "Oct 2025", event: "Began developing systems for clients" },
     { date: "Present", event: "Currently developing a wide range of systems from AI agents to decentralised systems" },
   ];
 
@@ -22,7 +23,10 @@ export default function Dashboard() {
     "Next.js", "React", "HTML", "CSS",
     "Python", "Flask", "Node.js",
     "OpenCV", "Keras-FaceNet",
-    "Git", "GitHub", "Linux", "APIs"
+    "Git", "GitHub", "APIs",
+    "Pandas", "Geopandas", "Numpy", 
+    "Matplotlib", "Plotly", "Scikit-learn",
+    "Prophet"
   ];
 
   const projectCategories = [
